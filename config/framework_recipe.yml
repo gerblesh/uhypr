@@ -1,10 +1,10 @@
 # image will be published to ghcr.io/<user>/<name>
 name: uhypr
 # description will be included in the image's metadata
-description: custom sway image for framework laptop
+description: custom sway image for framework laptop.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/main
+base-image: ghcr.io/ublue-os/base-main
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
