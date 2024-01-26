@@ -72,6 +72,5 @@ remove:
   - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
   - toolbox
   - kitty
-  - jack-audio-connection-kit
 optfix:
   - Mullvad VPN
