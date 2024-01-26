@@ -1,0 +1,42 @@
+type: yafti # if included, https://github.com/ublue-os/yafti will be installed and set up
+custom-flatpaks: # this section is optional
+  - Mpv (Media Player): io.mpv.Mpv
+  - KWallet (Git Askpass): org.kde.kwalletmanager5
+  - adw-gtk3 (GTK Theme): org.gtk.Gtk3theme.adw-gtk3-dark
+  - Pika Backup: org.gnome.World.PikaBackup
+  - Fedora Media Writer: org.fedoraproject.MediaWriter
+  - Flatseal (Permission Manager): com.github.tchx84.Flatseal
+  - Gradience (GTK4 theming): com.github.GradienceTeam.Gradience/x86_64/stable
+  - Spot (GTK4 Spotify Client): dev.alextren.Spot
+  - G4Music (GTK4 Music Player): com.github.neithern.g4music
+  - Dolpin (Wii and Gamecube emulator): org.DolphinEmu.dolphin-emu
+  - Cemu (Wii U emulator): info.cemu.Cemu
+  - Yuzu (Switch emulator): org.yuzu_emu.yuzu
+  - GNOME Clocks: org.gnome.clocks
+  - Easy Effects: com.github.wwmm.easyeffects
+  - Shotcut (Video Editor): org.shotcut.Shotcut
+  - OTP Client (2FA auth): com.github.paolostivanin.OTPClient
+  - Joplin (Notes App): net.cozic.joplin_desktop
+  - FileZilla (FTP Client): org.filezillaproject.Filezilla
+  - Blender (3D editor): org.blender.Blender
+  - Inkscape (SVG editor): org.inkscape.Inkscape
+  - Signal (Messenger): org.signal.Signal
+  - Shotcut (Video Editor): org.shotcut.Shotcut
+  - Tagger (Audio Tagger): org.nickvision.tagger
+  - Syncthing (File Syncing): me.kozec.syncthingtk
+  - Pods (Graphical Podman Frontend): com.github.marhkb.Pods
+  - Bottles: com.usebottles.bottles
+  - Discord: com.discordapp.Discord
+  - Heroic Games Launcher: com.heroicgameslauncher.hgl
+  - Steam: com.valvesoftware.Steam
+  - Gamescope (Utility): org.freedesktop.Platform.VulkanLayer.gamescope
+  - MangoHUD (Utility): org.freedesktop.Platform.VulkanLayer.MangoHud//22.08
+  - SteamTinkerLaunch (Utility): com.valvesoftware.Steam.Utility.steamtinkerlaunch
+  - Prism MC (Minecraft Launcher): org.prismlauncher.PrismLauncher
+  - Proton GE (Custom Proton Version): com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+  - Obsidian: md.obsidian.Obsidian
+  - Brave: com.brave.Browser
+  - OBS Studio: com.obsproject.Studio
+  - VkCapture for OBS: com.obsproject.Studio.OBSVkCapture
+  - Gstreamer for OBS: com.obsproject.Studio.Plugin.Gstreamer
+  - Gstreamer VAAPI for OBS: com.obsproject.Studio.Plugin.GStreamerVaapi
