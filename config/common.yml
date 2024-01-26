@@ -14,7 +14,7 @@ modules:
   - type: script
     scripts:
       # fetches local RPMs (Mullvad VPN)
-      - install-mullvad.sh
+      - install_mullvad.sh
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
   - from-file: module_config/systemd.yml
