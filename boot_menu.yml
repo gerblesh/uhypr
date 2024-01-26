@@ -1,9 +1,9 @@
 ublue_variants:
-  - label: gerblesh/usway
+  - label: gerblesh/uhypr
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: usway
-  - label: gerblesh/usway-nvidia
+      - label: uhypr
+  - label: gerblesh/uhypr-nvidia
     ks: /kickstart/ublue-os-nvidia.ks
     flavors:
-      - label: usway-nvidia
+      - label: uhypr-nvidia
