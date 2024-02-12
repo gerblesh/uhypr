@@ -7,7 +7,7 @@ set -oue pipefail
 
 mkdir -p /tmp/mullvad
 
-curl -Lo /tmp/rpms/mullvad-vpn.rpm https://mullvad.net/en/download/app/rpm/latest --max-redirs 1
+curl -Lo /tmp/mullvad/mullvad-vpn.rpm https://mullvad.net/en/download/app/rpm/latest --max-redirs 1
 
 #echo 'Downloading files needed for installation ...'
 #wget -qnc --trust-server-names https://mullvad.net/download/app/rpm/latest -P /tmp/mullvad
