@@ -35,4 +35,4 @@ jobs:
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
           registry: 'ghcr.io'
-          registry-namespace: ${{github.repository_owner}}
+          registry_namespace: ${{github.repository_owner}}
