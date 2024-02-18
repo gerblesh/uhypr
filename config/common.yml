@@ -11,6 +11,6 @@ modules:
   - from-file: module_config/bling.yml
   - from-file: module_config/yafti.yml
 
-  - type: signing
+  # - type: signing
   - from-file: module_config/systemd.yml
 
