@@ -13,4 +13,5 @@ modules:
 
   # - type: signing
   - from-file: module_config/systemd.yml
+  - type: signing
 
