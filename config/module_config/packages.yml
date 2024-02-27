@@ -15,7 +15,9 @@ install:
   - swaybg
   - swayidle
   - swaylock
-  - power-profiles-daemon
+  - tuned
+  - tuned-utils
+  - tuned-switcher
   - polkit-gnome
   - libseat
   - network-manager-applet
