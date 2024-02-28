@@ -1,7 +1,6 @@
 type: systemd
 system:
   enabled:
-    - power-profiles-daemon
     - mullvad-daemon
     - sddm.service
   disabled:
