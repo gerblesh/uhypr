@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
-NEW_WALLPAPER=$(/usr/bin/ls -1 "$HOME/Pictures/Wallpapers/Mocha" | fuzzel --dmenu --prompt " Select Wallpaper:  ")
+#!/usr/bin/env fish
 
-/usr/bin/wallpaper "$HOME/Pictures/Wallpapers/Mocha/$NEW_WALLPAPER"
+#wezterm start --class "floatterm" --cwd ~/Pictures/Wallpapers/Mocha/ fish -ic 'wallpaper (pwd)/(fzf)'
+foot -w 1000x1000 --app-id "floatterm" -D ~/Pictures/Wallpapers/Mocha/ fish -ic 'wallpaper (pwd)/(fzf)'
+
+wallpaper init

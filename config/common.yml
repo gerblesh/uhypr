@@ -1,7 +1,7 @@
 modules:
   - type: files
     files:
-      - homedir: /usr/etc/homedir
+      #- homedir: /usr/etc/homedir
       - usr: /usr # copy static configurations
                   # configuration you wish to end up in /etc/ on the booted system should be
                   # added into /usr/etc/ as that is the proper "distro" config directory on ostree

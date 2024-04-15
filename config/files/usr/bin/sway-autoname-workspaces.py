@@ -7,6 +7,8 @@
 # Add your icons to WINDOW_ICONS.
 # Based on https://github.com/maximbaz/dotfiles/blob/master/bin/i3-autoname-workspaces
 
+import json
+import os
 import argparse
 import i3ipc
 import logging
@@ -14,39 +16,23 @@ import re
 import signal
 import sys
 
-WINDOW_ICONS = {
-    "firefox": "",
-    "godot_engine": "",
-    "foot": "",
-    "brave-browser": "",
-    "lite-xl": "",
-    "dev.alextren.spot": "",
-    "com.github.neithern.g4music": "󰝚",
-    "thunar": "󰪶",
-    "mpv": "󰈫",
-    "imv": "",
-    "com.obsproject.studio": "󰑋",
-    "obsidian": "󱓧",
-    "mullvad vpn": "󰒄",
-    "signal": "󰆉",
-    "librewolf": "󰈹",
-    "firefox": "󰈹",
-    "de.haeckerfelix.fragments": "󱑣",
-    "steamwebhelper": "󰓓",
-    "dolphin-emu": "󱢴",
-    "yuzu": "󰟡",
-    "info.cemu.cemu": "󰜭",
-    "otpclient": "󰥿",
-    "com.github.tchx84.flatseal": "",
-    "com.github.gradienceteam.gradience.devel": "",
-    "io.github.flattool.warehouse": "",
-    "io.missioncenter.missioncenter": "󰨇",
-    "gnome-boxes": "󰹑",
-    "blender": "󰂫",
-    "com.usebottles.bottles": "󰡶",
-    "org.gnome.world.pikabackup": "󰁯",
-    "org.gnome.clocks": ""
-}
+paths: list = [
+    os.path.expanduser("~/.config/waybar/autoname.json"),
+    "/etc/xdg/waybar/autoname.json",
+    "/usr/etc/xdg/waybar/autoname.json",
+]
+
+config_path = ""
+for path in paths:
+    if os.path.exists(path):
+        config_path = path
+        break
+
+if config_path == "":
+    os.exit(1)
+
+with open(config_path) as file:
+    WINDOW_ICONS = json.load(file)
 
 DEFAULT_ICON = ""
 
@@ -56,15 +42,15 @@ def icon_for_window(window):
     if window.app_id is not None and len(window.app_id) > 0:
         name = window.app_id.lower()
     elif window.window_instance is not None and len(window.window_instance) > 0:
-        name =  window.window_instance.lower()
+        name = window.window_instance.lower()
     elif window.window_class is not None and len(window.window_class) > 0:
-        name =  window.window_class.lower()
-
+        name = window.window_class.lower()
     if name in WINDOW_ICONS:
         return WINDOW_ICONS[name]
 
     logging.info("No icon available for window with name: %s" % str(name))
     return DEFAULT_ICON
+
 
 def rename_workspaces(ipc):
     for workspace in ipc.get_tree().workspaces():
