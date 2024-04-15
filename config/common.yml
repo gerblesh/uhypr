@@ -9,7 +9,7 @@ modules:
 
   - from-file: module_config/packages.yml
   - from-file: module_config/bling.yml
-  - from-file: module_config/yafti.yml
+  # - from-file: module_config/yafti.yml
   - type: script
     scripts:
       - starship.sh

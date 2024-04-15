@@ -18,3 +18,5 @@ modules:
       - framework/sway: /usr/etc/sway
       - framework/mako: /usr/etc/homedir/.config/mako
       - framework/sddm: /usr/share/sddm
+      - framework/waybar: /usr/etc/xdg/waybar
+      - framework/wezterm: /usr/etc/homedir/.config/wezterm
