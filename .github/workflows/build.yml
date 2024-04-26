@@ -28,10 +28,10 @@ jobs:
           - framework_recipe.yml
     steps:
       - name: Build Custom Image
-        uses: gerblesh/github-action@patch-2
+        uses: blue-build/github-action@use-new-clie-features
         with:
           recipe: ${{ matrix.recipe }}
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
-          use_cache: false
+          use_cache: true
