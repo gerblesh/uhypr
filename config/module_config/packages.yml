@@ -9,7 +9,7 @@ install:
   - make
   - mesa-libGLU
   - podman-compose
-  - podman-plugins
+  # - podman-plugins
   - podman-tui
   - podmansh
   # hyprland packages
