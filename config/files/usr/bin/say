@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-ARG="$@"
-
-SANITIZED=$(echo $ARG | sed 's/_/underscore/g')
-
-espeak-ng "$SANITIZED"
