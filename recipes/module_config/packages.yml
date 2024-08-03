@@ -21,7 +21,6 @@ install:
   - wezterm
   # sway pkg
   - sway
-  # android
   # it's a miracle
   - miracle-wm
   - android-tools
@@ -30,9 +29,7 @@ install:
   - swaybg
   - swayidle
   - swaylock
-  - tuned
-  - tuned-utils
-  - tuned-switcher
+  - power-profiles-daemon
   - polkit-gnome
   - libseat
   - network-manager-applet

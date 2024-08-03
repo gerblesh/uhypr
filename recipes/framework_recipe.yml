@@ -13,10 +13,14 @@ modules:
   - from-file: common.yml
   - type: files
     files:
-      - framework/foot: /usr/etc/xdg/foot
-      - framework/fuzzel: /usr/etc/xdg/fuzzel
-      - framework/sway: /usr/etc/sway
-      - framework/mako: /usr/etc/homedir/.config/mako
-      - framework/sddm: /usr/share/sddm
-      - framework/waybar: /usr/etc/xdg/waybar
-      - framework/wezterm: /usr/etc/homedir/.config/wezterm
+      - source: framework/foot
+        destination: /usr/etc/xdg/foot
+
+      - source: framework/fuzzel
+        destination: /usr/etc/xdg/fuzzel
+      - source: framework/sway
+        destination: /usr/etc/sway
+      - source: framework/sddm
+        destination: /usr/share/sddm
+      - source: framework/waybar
+        destination: /usr/etc/xdg/waybar

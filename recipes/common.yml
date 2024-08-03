@@ -1,15 +1,11 @@
 modules:
   - type: files
     files:
-      #- homedir: /usr/etc/homedir
-      - usr: /usr # copy static configurations
-                  # configuration you wish to end up in /etc/ on the booted system should be
-                  # added into /usr/etc/ as that is the proper "distro" config directory on ostree
-                  # read more in the files module's README
+      - source: usr
+        destination: /usr
 
   - from-file: module_config/packages.yml
   - from-file: module_config/bling.yml
-  # - from-file: module_config/yafti.yml
   - type: script
     scripts:
       - starship.sh
