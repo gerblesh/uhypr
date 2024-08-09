@@ -9,6 +9,7 @@ install:
   - make
   - mesa-libGLU
   - podman-compose
+  - code # need this on the host :(
   # - podman-plugins
   - podman-tui
   - podmansh
