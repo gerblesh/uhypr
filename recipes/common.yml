@@ -9,9 +9,11 @@ modules:
   - type: script
     scripts:
       - vscode.sh
-      - starship.sh
   - from-file: module_config/packages.yml
   - from-file: module_config/bling.yml
+  - type: script
+    scripts:
+      - starship.sh
 
   # - type: signing
   - from-file: module_config/systemd.yml
