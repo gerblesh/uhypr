@@ -14,13 +14,13 @@ modules:
   - type: files
     files:
       - source: framework/foot
-        destination: /usr/etc/xdg/foot
+        destination: /etc/xdg/foot
 
       - source: framework/fuzzel
-        destination: /usr/etc/xdg/fuzzel
+        destination: /etc/xdg/fuzzel
       - source: framework/sway
-        destination: /usr/etc/sway
+        destination: /etc/sway
       - source: framework/sddm
-        destination: /usr/share/sddm
+        destination: /share/sddm
       - source: framework/waybar
-        destination: /usr/etc/xdg/waybar
+        destination: /etc/xdg/waybar
