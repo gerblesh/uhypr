@@ -6,12 +6,12 @@ modules:
       - source: etc
         destination: /etc
 
-  - from-file: module_config/packages.yml
-  - from-file: module_config/bling.yml
   - type: script
     scripts:
       - vscode.sh
       - starship.sh
+  - from-file: module_config/packages.yml
+  - from-file: module_config/bling.yml
 
   # - type: signing
   - from-file: module_config/systemd.yml

@@ -63,7 +63,6 @@ install:
   - foot
   # screenshotting
   - grimshot
-  - wdisplays
   - gnome-keyring
   # fonts
   - overpass-fonts
