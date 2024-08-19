@@ -21,6 +21,7 @@ install:
   - xdg-user-dirs
   - wezterm
   # sway pkg
+  - tailscale
   - sway
   # it's a miracle
   - miracle-wm
