@@ -14,6 +14,7 @@ install:
   - podman-tui
   - podmansh
   # hyprland packages
+  - gvfs-fuse
   - hyprland
   - xdg-desktop-portal-hyprland
   - waybar
