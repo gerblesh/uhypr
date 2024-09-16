@@ -13,6 +13,8 @@ install:
   # - podman-plugins
   - podman-tui
   - podmansh
+  - NetworkManager-tui
+  - rofi-wayland
   # hyprland packages
   - gvfs-fuse
   - hyprland
