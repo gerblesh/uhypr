@@ -36,7 +36,7 @@ jobs:
         uses: jasonn3/build-container-installer@main
         id: build
         with:
-          arch: X86_64
+          arch: x86_64
           image_name: ${{ matrix.image.name }}
           image_repo: ${{ env.IMAGE_REGISTRY }}
           image_tag: ${{ matrix.image_tag }}
