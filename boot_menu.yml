@@ -3,6 +3,10 @@ ublue_variants:
     ks: /kickstart/ublue-os.ks
     flavors:
       - label: uhypr
+  - label: gerblesh/ucosmic
+    ks: /kickstart/ublue-os.ks
+    flavors:
+     - label: ucosmic
   - label: gerblesh/uhypr-nvidia
     ks: /kickstart/ublue-os-nvidia.ks
     flavors:
