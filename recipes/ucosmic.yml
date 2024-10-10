@@ -1,0 +1,116 @@
+# image will be published to ghcr.io/<user>/<name>
+name: ucosmic
+# description will be included in the image's metadata
+description: custom cosmic image for framework laptop
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/cosmic
+image-version: latest # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: script
+    scripts:
+      - vscode.sh
+  - from-file: module_config/packages.yml
+  type: rpm-ostree
+  repos:
+    - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
+    - https://repository.mullvad.net/rpm/stable/mullvad.repo
+    - https://copr.fedorainfracloud.org/coprs/wiiznokes/cosmic-applets-unofficial/repo/fedora-%OS_VERSION%/wiiznokes-cosmic-applets-unofficial-fedora-%OS_VERSION%.repo
+    install:
+    # extra cosmic applets
+    - cosmic-ext-applet-clipboard-manager
+    - cosmic-ext-applet-emoji-selector
+    - cosmic-ext-applet-external-monitor-brightness
+    - cosmic-ext-applet-minimon
+    - cosmic-ext-applet-ollama
+    # for brew
+    - gcc-c++
+    - gcc
+    - make
+    - mesa-libGLU
+    - podman-compose
+    # - podman-plugins
+    - podman-tui
+    - podmansh
+    - NetworkManager-tui
+    - rofi-wayland
+    - gvfs-fuse
+    - waybar
+    - xorg-x11-server-Xwayland
+    - xdg-user-dirs
+    # sway pkg
+    - tailscale
+    - sway
+    - android-tools
+    - android-file-transfer
+    # common utils
+    - swaybg
+    - swayidle
+    - swaylock
+    - power-profiles-daemon
+    - polkit-gnome
+    - libseat
+    - network-manager-applet
+    - system-config-printer
+    - firewall-config
+    - blueman
+    - imv
+    - eza
+    - gnome-disk-utility
+    - mako
+    - xarchiver
+    - pavucontrol
+    - docker-compose
+    # launchers
+    - fuzzel
+    # terminals
+    - wezterm
+    # screenshotting
+    - grimshot
+    - gnome-keyring
+    # fonts
+    - overpass-fonts
+    - overpass-mono-fonts
+    - google-noto-emoji-fonts
+    - google-noto-fonts-common
+    - google-roboto-fonts
+    - google-noto-sans-fonts
+    # config deps
+    - light
+    - fish
+    - wtype
+    # audio
+    - pipewire
+    - wireplumber
+    - pipewire-alsa
+    - pipewire-jack-audio-connection-kit
+    - pipewire-pulseaudio
+    # git askpass
+    - ksshaskpass
+    # Mullvad
+    - mullvad-vpn
+  remove:
+    - firefox # default firefox removed in favor of flatpak
+    - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+    - toolbox
+  optfix:
+    - Mullvad VPN
+
+  - type: bling
+    install:
+      - ublue-update
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - JetBrainsMono
+        - Terminus
+        - Meslo
+        - NerdFontsSymbolsOnly
+
+  # - type: signing
+  - from-file: module_config/systemd.yml
+  - type: signing

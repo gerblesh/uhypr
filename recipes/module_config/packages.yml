@@ -17,8 +17,6 @@ install:
   - rofi-wayland
   # hyprland packages
   - gvfs-fuse
-  - hyprland
-  - xdg-desktop-portal-hyprland
   - waybar
   - xorg-x11-server-Xwayland
   - xdg-user-dirs
@@ -26,8 +24,6 @@ install:
   # sway pkg
   - tailscale
   - sway
-  # it's a miracle
-  - miracle-wm
   - android-tools
   - android-file-transfer
   # common utils
