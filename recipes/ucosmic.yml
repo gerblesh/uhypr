@@ -14,8 +14,8 @@ modules:
     scripts:
       - vscode.sh
   - from-file: module_config/packages.yml
-  type: rpm-ostree
-  repos:
+  - type: rpm-ostree
+    repos:
     - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
     - https://repository.mullvad.net/rpm/stable/mullvad.repo
     - https://copr.fedorainfracloud.org/coprs/wiiznokes/cosmic-applets-unofficial/repo/fedora-%OS_VERSION%/wiiznokes-cosmic-applets-unofficial-fedora-%OS_VERSION%.repo
@@ -92,11 +92,11 @@ modules:
     - ksshaskpass
     # Mullvad
     - mullvad-vpn
-  remove:
+    remove:
     - firefox # default firefox removed in favor of flatpak
     - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
     - toolbox
-  optfix:
+    optfix:
     - Mullvad VPN
 
   - type: bling
