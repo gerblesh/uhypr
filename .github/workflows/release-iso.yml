@@ -21,11 +21,6 @@ jobs:
       contents: read
       packages: write
       id-token: write
-    container:
-      image: fedora:${{ matrix.major_version }}
-      options: "--privileged"
-      volumes:
-        - "/:/host"
     strategy:
       fail-fast: false
       matrix:
