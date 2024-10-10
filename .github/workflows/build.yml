@@ -26,6 +26,7 @@ jobs:
         recipe:
           # !! Add your recipes here 
           - framework_recipe.yml
+          - ucosmic.yml
     steps:
       - name: Build Custom Image
         uses: blue-build/github-action@main
