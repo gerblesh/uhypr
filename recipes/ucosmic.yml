@@ -22,7 +22,7 @@ modules:
     - https://copr.fedorainfracloud.org/coprs/bhh32/gui-scale-applet/repo/fedora-%OS_VERSION%/bhh32-gui-scale-applet-fedora-%OS_VERSION%.repo
     install:
     # extra cosmic applets
-    - gui-scale-applet
+    - gui-scale-applet 
     - cosmic-ext-applet-clipboard-manager
     - cosmic-ext-applet-emoji-selector
     - cosmic-ext-applet-external-monitor-brightness
