@@ -92,7 +92,7 @@ modules:
     - ksshaskpass
     # Mullvad
     - mullvad-vpn
-    type: rpm-ostree
+    - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/bhh32/gui-scale-applet/repo/fedora-%OS_VERSION%/bhh32-gui-scale-applet-fedora-%OS_VERSION%.repo
     packages:
