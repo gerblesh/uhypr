@@ -13,7 +13,6 @@ modules:
   - type: script
     scripts:
       - vscode.sh
-  - from-file: module_config/packages.yml
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
