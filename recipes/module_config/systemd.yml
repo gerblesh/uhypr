@@ -2,6 +2,5 @@ type: systemd
 system:
   enabled:
     - mullvad-daemon
-    - sddm.service
   disabled:
     - rpm-ostree-countme.timer
