@@ -18,8 +18,10 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
       - https://repository.mullvad.net/rpm/stable/mullvad.repo
       - https://copr.fedorainfracloud.org/coprs/wiiznokes/cosmic-applets-unofficial/repo/fedora-%OS_VERSION%/wiiznokes-cosmic-applets-unofficial-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/bhh32/gui-scale-applet/repo/fedora-%OS_VERSION%/bhh32-gui-scale-applet-fedora-%OS_VERSION%.repo
     install:
       # extra cosmic applets
+      - gui-scale-applet
       - cosmic-ext-applet-clipboard-manager
       - cosmic-ext-applet-emoji-selector
       - cosmic-ext-applet-external-monitor-brightness
@@ -83,12 +85,6 @@ modules:
       - pipewire-pulseaudio
       # Mullvad
       - mullvad-vpn
-
-  - type: rpm-ostree
-    repos:
-      - https://copr.fedorainfracloud.org/coprs/bhh32/gui-scale-applet/repo/fedora-%OS_VERSION%/bhh32-gui-scale-applet-fedora-%OS_VERSION%.repo
-    packages:
-      - gui-scale-applet
 
   - type: bling
     install:
