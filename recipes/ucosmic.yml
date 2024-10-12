@@ -42,20 +42,14 @@ modules:
       - xdg-user-dirs
       # sway pkg
       - tailscale
-      - sway
       - android-tools
       - android-file-transfer
       # common utils
-      - swaybg
-      - swayidle
-      - swaylock
       - power-profiles-daemon
       - polkit-gnome
       - libseat
-      - network-manager-applet
       - system-config-printer
       - firewall-config
-      - blueman
       - imv
       - eza
       - gnome-disk-utility
@@ -87,8 +81,6 @@ modules:
       - pipewire-alsa
       - pipewire-jack-audio-connection-kit
       - pipewire-pulseaudio
-      # git askpass
-      - ksshaskpass
       # Mullvad
       - mullvad-vpn
 
