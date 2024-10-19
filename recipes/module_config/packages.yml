@@ -3,6 +3,7 @@ repos:
   - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
   - https://repository.mullvad.net/rpm/stable/mullvad.repo
 install:
+  - trayscale
   # for brew
   - adw-gtk3-theme
   - gcc-c++
