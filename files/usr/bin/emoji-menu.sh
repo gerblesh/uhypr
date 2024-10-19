@@ -10,7 +10,7 @@ if ! [ -f "$data_file" ]; then
 fi
 
 filter='.[] | (.emoji + " " + .description + " (" + (.aliases | join(", ")) + ")")'
-sel="$(jq -r "$filter" <"$data_file" | fuzzel --dmenu --prompt " Select Emoji:  " | cut -d ' ' -f 1 | tr -d '\n')"
+sel="$(jq -r "$filter" <"$data_file" | rofi -dmenu -p " Select Emoji:  " | cut -d ' ' -f 1 | tr -d '\n')"
 if [ -n "$sel" ]; then
     wl-copy "$sel"
     wtype "$sel"

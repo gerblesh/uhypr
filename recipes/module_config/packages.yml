@@ -4,6 +4,7 @@ repos:
   - https://repository.mullvad.net/rpm/stable/mullvad.repo
 install:
   # for brew
+  - adw-gtk3-theme
   - gcc-c++
   - gcc
   - make

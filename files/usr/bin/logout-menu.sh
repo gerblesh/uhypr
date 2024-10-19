@@ -5,7 +5,7 @@ playerctl -a pause
 
 options=" Screen Lock\n󰍃 Logout\n󰤄 Sleep\n⏻ Shutdown\n Restart\n BIOS"
 
-choice=$(printf "$options" | fuzzel --dmenu --index --prompt=" Goodbye!  ")
+choice=$(printf "$options" | rofi -dmenu -format 'i' -p " Goodbye!  ")
 
 echo $choice
 

@@ -11,16 +11,16 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # you can include multiple instances of the same module
 modules:
   - from-file: common.yml
+  - type: brew
+    nofile-limits: true # increase nofile limits
+    brew-analytics: false # disable telemetry
   - type: files
     files:
       - source: framework/foot
         destination: /etc/xdg/foot
-
       - source: framework/fuzzel
         destination: /etc/xdg/fuzzel
       - source: framework/sway
         destination: /etc/sway
-      - source: framework/sddm
-        destination: /share/sddm
       - source: framework/waybar
         destination: /etc/xdg/waybar

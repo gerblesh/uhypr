@@ -19,7 +19,6 @@ import sys
 paths: list = [
     os.path.expanduser("~/.config/waybar/autoname.json"),
     "/etc/xdg/waybar/autoname.json",
-    "/usr/etc/xdg/waybar/autoname.json",
 ]
 
 config_path = ""
