@@ -33,7 +33,7 @@ install:
   - swayidle
   - swaylock
   - power-profiles-daemon
-  - polkit-gnome
+  - lxqt-policykit
   - libseat
   - network-manager-applet
   - system-config-printer
