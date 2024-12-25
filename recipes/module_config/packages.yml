@@ -12,6 +12,7 @@ install:
   - mesa-libGLU
   - podman-compose
   - code # need this on the host :(
+  - distrobox
   # - podman-plugins
   - podman-tui
   - podmansh
