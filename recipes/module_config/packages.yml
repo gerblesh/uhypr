@@ -6,7 +6,6 @@ repos:
   - https://repository.mullvad.net/rpm/stable/mullvad.repo
 install:
   - gtk4-layer-shell
-  - ghostty
   - uupd
   - trayscale
   # for brew
