@@ -5,7 +5,10 @@ repos:
   # - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
   - https://repository.mullvad.net/rpm/stable/mullvad.repo
 install:
+
   - zathura
+  - zathura-fish-completion
+  - zathura-plugins-all
   - glow
   - gtk4-layer-shell
   - uupd
