@@ -96,7 +96,7 @@ install:
   # Mullvad
   - mullvad-vpn
 remove:
-  - jack-audio-connection-kit
+  # - jack-audio-connection-kit
   - firefox # default firefox removed in favor of flatpak
   - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
   - toolbox
