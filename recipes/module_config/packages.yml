@@ -23,6 +23,7 @@ install:
   # - podman-plugins
   - podman-tui
   - podmansh
+  - podman-machine
   - NetworkManager-tui
   - rofi-wayland
   # hyprland packages
