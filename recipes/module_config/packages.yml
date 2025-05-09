@@ -6,106 +6,109 @@ repos:
     - ublue-os/packages
     - wezfurlong/wezterm-nightly
     - pgdev/ghostty
-    # - https://copr.fedorainfracloud.org/coprs/ublue-os/packages/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
-    # - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
-    # - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
-install:
-  - ghostty
-  - zathura
-  - zathura-fish-completion
-  - zathura-plugins-all
-  - gtk4-layer-shell
-  - uupd
-  - trayscale
-  # for brew
-  - adw-gtk3-theme
-  - gcc-c++
-  - gcc
-  - make
-  - mesa-libGLU
-  - podman-compose
-  - code # need this on the host :(
-  - distrobox
-  # - podman-plugins
-  - podman-tui
-  - podmansh
-  - podman-machine
-  - NetworkManager-tui
-  - rofi-wayland
-  # hyprland packages
-  - gvfs-fuse
-  - waybar
-  - xorg-x11-server-Xwayland
-  - xdg-user-dirs
-  - wezterm
-  # sway pkg
-  - tailscale
-  - sway
-  - android-tools
-  - android-file-transfer
-  # common utils
-  - swaybg
-  - swayidle
-  - swaylock
-  - power-profiles-daemon
-  - lxqt-policykit
-  - libseat
-  - network-manager-applet
-  - system-config-printer
-  - firewall-config
-  - blueman
-  - thunar
-  - thunar-archive-plugin
-  - imv
-  - kvantum
-  # - eza
-  - gnome-disk-utility
-  - mako
-  - xarchiver
-  - pavucontrol
-  - swappy
-  - docker-compose
-  # qt shiz
-  - sddm
-  - qt5ct
-  - qt6ct
-  - qt6-qtwayland
-  - qt5-qtwayland
-  - qt5-qtgraphicaleffects
-  - qt5-qtquickcontrols2
-  - qt5-qtsvg
-  # launchers
-  - fuzzel
-  # terminals
-  - foot
-  # screenshotting
-  - grimshot
-  - gnome-keyring
-  # fonts
-  - overpass-fonts
-  - overpass-mono-fonts
-  - google-noto-emoji-fonts
-  - google-noto-fonts-common
-  - google-roboto-fonts
-  - google-noto-sans-fonts
-  # config deps
-  - light
-  - fish
-  - wtype
-  # audio
-  - pipewire
-  - wireplumber
-  - pipewire-alsa
-  - pipewire-jack-audio-connection-kit
-  - pipewire-pulseaudio
-  # git askpass
-  - ksshaskpass
-  # Mullvad
-  - mullvad-vpn
-remove:
-  # - jack-audio-connection-kit
-  - firefox # default firefox removed in favor of flatpak
-  - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-  - toolbox
+    # https://copr.fedorainfracloud.org/coprs/ublue-os/packages/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
+    # https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
+    # https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
 optfix:
   - Mullvad VPN
+install:
+  skip-unavailable: true # skip unavailable packages
+  packages:
+    - ghostty
+    - zathura
+    - zathura-fish-completion
+    - zathura-plugins-all
+    - gtk4-layer-shell
+    - uupd
+    - trayscale
+    # for brew
+    - adw-gtk3-theme
+    - gcc-c++
+    - gcc
+    - make
+    - mesa-libGLU
+    - podman-compose
+    - code # need this on the host :(
+    - distrobox
+    # - podman-plugins
+    - podman-tui
+    - podmansh
+    - podman-machine
+    - NetworkManager-tui
+    - rofi-wayland
+    # hyprland packages
+    - gvfs-fuse
+    - waybar
+    - xorg-x11-server-Xwayland
+    - xdg-user-dirs
+    - wezterm
+    # sway pkg
+    - tailscale
+    - sway
+    - android-tools
+    - android-file-transfer
+    # common utils
+    - swaybg
+    - swayidle
+    - swaylock
+    - power-profiles-daemon
+    - lxqt-policykit
+    - libseat
+    - network-manager-applet
+    - system-config-printer
+    - firewall-config
+    - blueman
+    - thunar
+    - thunar-archive-plugin
+    - imv
+    - kvantum
+    # - eza
+    - gnome-disk-utility
+    - mako
+    - xarchiver
+    - pavucontrol
+    - swappy
+    - docker-compose
+    # qt shiz
+    - sddm
+    - qt5ct
+    - qt6ct
+    - qt6-qtwayland
+    - qt5-qtwayland
+    - qt5-qtgraphicaleffects
+    - qt5-qtquickcontrols2
+    - qt5-qtsvg
+    # launchers
+    - fuzzel
+    # terminals
+    - foot
+    # screenshotting
+    - grimshot
+    - gnome-keyring
+    # fonts
+    - overpass-fonts
+    - overpass-mono-fonts
+    - google-noto-emoji-fonts
+    - google-noto-fonts-common
+    - google-roboto-fonts
+    - google-noto-sans-fonts
+    # config deps
+    - light
+    - fish
+    - wtype
+    # audio
+    - pipewire
+    - wireplumber
+    - pipewire-alsa
+    - pipewire-jack-audio-connection-kit
+    - pipewire-pulseaudio
+    # git askpass
+    - ksshaskpass
+    # Mullvad
+    - mullvad-vpn
+remove:
+  packages:
+  # - jack-audio-connection-kit
+    - firefox # default firefox removed in favor of flatpak
+    - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+    - toolbox
