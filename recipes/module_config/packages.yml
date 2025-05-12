@@ -5,7 +5,7 @@ repos:
   copr:
     - ublue-os/packages
     # - wezfurlong/wezterm-nightly
-    - pgdev/ghostty
+    # - pgdev/ghostty
     # https://copr.fedorainfracloud.org/coprs/ublue-os/packages/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
     # https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
     # https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
@@ -14,7 +14,6 @@ optfix:
 install:
   skip-unavailable: true # skip unavailable packages
   packages:
-    - ghostty
     - zathura
     - zathura-fish-completion
     - zathura-plugins-all
