@@ -1,5 +1,6 @@
 type: dnf
 repos:
+  nonfree: rpmfusion
   files:
     - https://repository.mullvad.net/rpm/stable/mullvad.repo
   copr:
@@ -105,6 +106,7 @@ install:
     - ksshaskpass
     # Mullvad
     - mullvad-vpn
+    - steam
 remove:
   packages:
   # - jack-audio-connection-kit
