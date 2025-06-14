@@ -3,7 +3,6 @@ repos:
   nonfree: rpmfusion
   files:
     - https://repository.mullvad.net/rpm/stable/mullvad.repo
-    - https://repos.fyralabs.com/terra%OS_VERSION%
   copr:
     - ublue-os/packages
     # - wezfurlong/wezterm-nightly
@@ -108,7 +107,6 @@ install:
     # Mullvad
     - mullvad-vpn
     - steam
-    - ghostty
 remove:
   packages:
   # - jack-audio-connection-kit
