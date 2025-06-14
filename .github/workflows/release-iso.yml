@@ -29,7 +29,7 @@ jobs:
             variant: Sway
           - name: ucosmic
             variant: Cosmic
-        major_version: [40]
+        major_version: [42]
         image_tag: [latest]
     steps:
       - name: Build ISOs
