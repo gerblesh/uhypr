@@ -15,13 +15,19 @@ modules:
   - type: brew
     nofile-limits: true # increase nofile limits
     brew-analytics: false # disable telemetry
-  - type: files
-    files:
-      - source: framework/foot
-        destination: /etc/xdg/foot
-      - source: framework/fuzzel
-        destination: /etc/xdg/fuzzel
-      - source: framework/sway
-        destination: /etc/sway
-      - source: framework/waybar
-        destination: /etc/xdg/waybar
+  - type: chezmoi
+    repository: "https://github.com/gerblesh/dotfiles" # my dotfiles repo
+    all-users: true # make users have to enable chezmoi manually
+    file-conflict-policy: replace # override changed files with those from the repo
+    disable-update: true
+    disable-init: false
+#  - type: files
+#    files:
+#      - source: framework/foot
+#       destination: /etc/xdg/foot
+#      - source: framework/fuzzel
+#        destination: /etc/xdg/fuzzel
+#      - source: framework/sway
+#        destination: /etc/sway
+#      - source: framework/waybar
+#        destination: /etc/xdg/waybar
