@@ -2,5 +2,8 @@ type: systemd
 system:
   enabled:
     - mullvad-daemon
+    - tailscaled
   disabled:
     - rpm-ostree-countme.timer
+    - system-flatpak-setup
+    - user-flatpak-setup
