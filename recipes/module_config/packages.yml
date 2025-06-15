@@ -5,6 +5,7 @@ repos:
     - https://repository.mullvad.net/rpm/stable/mullvad.repo
   copr:
     - ublue-os/packages
+    - xeriab/ghostty
     # - wezfurlong/wezterm-nightly
     # - pgdev/ghostty
     # https://copr.fedorainfracloud.org/coprs/ublue-os/packages/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
@@ -15,6 +16,7 @@ optfix:
 install:
   skip-unavailable: true # skip unavailable packages
   packages:
+    - ghostty
     - zathura
     - zathura-fish-completion
     - zathura-plugins-all
