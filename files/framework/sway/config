@@ -1,6 +1,0 @@
-
-set $XDG_CONFIG_HOME ~/.config
-
-include "$XDG_CONFIG_HOME/sway/config.d/*.conf"
-#include "/usr/share/sway/config.d/*.conf"
-#include "/etc/sway/config.d/*.conf"

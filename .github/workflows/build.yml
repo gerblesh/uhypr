@@ -24,9 +24,7 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          # !! Add your recipes here 
-          - framework_recipe.yml
-          # - ucosmic.yml
+          - recipe.yml
     steps:
       - name: Build Custom Image
         uses: blue-build/github-action@main
