@@ -68,7 +68,6 @@ install:
     - gnome-disk-utility
     - mako
     - xarchiver
-    - pavucontrol
     - swappy
     - docker-compose
     # qt shiz
