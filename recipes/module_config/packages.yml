@@ -108,6 +108,7 @@ install:
     # Mullvad
     - mullvad-vpn
     - steam
+    - openssl-devel
 remove:
   packages:
   # - jack-audio-connection-kit
