@@ -5,6 +5,7 @@ repos:
     - https://repository.mullvad.net/rpm/stable/mullvad.repo
   copr:
     - ublue-os/packages
+    - ublue-os/staging
     - xeriab/ghostty
     # - wezfurlong/wezterm-nightly
     # - pgdev/ghostty
@@ -16,6 +17,7 @@ optfix:
 install:
   skip-unavailable: true # skip unavailable packages
   packages:
+    - bazaar
     - ghostty
     - zathura
     - zathura-fish-completion
