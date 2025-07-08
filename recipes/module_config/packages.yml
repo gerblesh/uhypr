@@ -53,7 +53,6 @@ install:
     - swaybg
     - swayidle
     - swaylock
-    - power-profiles-daemon
     - lxqt-policykit
     - libseat
     - network-manager-applet
