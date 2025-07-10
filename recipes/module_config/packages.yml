@@ -6,7 +6,7 @@ repos:
   copr:
     - ublue-os/packages
     - ublue-os/staging
-    - xeriab/ghostty
+    - gerelef/ghostty
     - wezfurlong/wezterm-nightly
     # - pgdev/ghostty
 optfix:
@@ -14,6 +14,7 @@ optfix:
 install:
   skip-unavailable: true # skip unavailable packages
   packages:
+    - podman-docker
     - bazaar
     - wezterm
     - ghostty
