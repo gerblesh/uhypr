@@ -17,12 +17,15 @@ install:
     - podman-docker
     - bazaar
     - wezterm
+
     - repo: terra
       packages:
          - android-udev-rules
-    - repo: copr:copr.fedorainfracloud.org:gerelef:ghostty
-      packages:
-         - ghostty
+    # - repo: copr:copr.fedorainfracloud.org:gerelef:ghostty
+    #   packages:
+    #      - ghostty
+    - ghostty
+
     - zathura
     - zathura-fish-completion
     - zathura-plugins-all
