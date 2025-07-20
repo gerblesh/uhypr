@@ -3,6 +3,7 @@ repos:
   nonfree: rpmfusion
   files:
     - https://repository.mullvad.net/rpm/stable/mullvad.repo
+    - https://repos.fyralabs.com/terra%OS_VERSION%
   copr:
     - ublue-os/packages
     - ublue-os/staging
@@ -14,6 +15,7 @@ optfix:
 install:
   skip-unavailable: true # skip unavailable packages
   packages:
+    - android-udev-rules
     - podman-docker
     - bazaar
     - wezterm
