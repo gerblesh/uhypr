@@ -12,7 +12,7 @@ repos:
 optfix:
   - Mullvad VPN
 install:
-  # skip-unavailable: true # skip unavailable packages
+  skip-unavailable: true # skip unavailable packages
   packages:
     - podman-docker
     - bazaar
@@ -21,10 +21,9 @@ install:
     - repo: terra
       packages:
          - android-udev-rules
-    # - repo: copr:copr.fedorainfracloud.org:gerelef:ghostty
-    #   packages:
-    #      - ghostty
-    - ghostty
+    - repo: copr:copr.fedorainfracloud.org:gerelef:ghostty
+      packages:
+         - ghostty
 
     - zathura
     - zathura-fish-completion
