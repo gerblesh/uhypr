@@ -1,6 +1,5 @@
 modules:
-# Install ghostty seperately
-  - type: dnf
+  - type: dnf # Install seperately
     repos:
       copr:
       - gerelef/ghostty
