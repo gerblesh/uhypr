@@ -1,124 +1,130 @@
-type: dnf
-repos:
-  nonfree: rpmfusion
-  files:
-    - https://repository.mullvad.net/rpm/stable/mullvad.repo
-    - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
-  copr:
-    - ublue-os/packages
-    - ublue-os/staging
-    - gerelef/ghostty
-    - wezfurlong/wezterm-nightly
-optfix:
-  - Mullvad VPN
-install:
-  skip-unavailable: true # skip unavailable packages
-  packages:
-    - podman-docker
-    - bazaar
-    - wezterm
-
-    - repo: terra
+modules:
+# Install ghostty seperately
+  - type: dnf
+    repos:
+      copr:
+      - gerelef/ghostty
+    install:
+      skip-unavailable: true # skip unavailable packages
       packages:
-         - android-udev-rules
-    - repo: copr:copr.fedorainfracloud.org:gerelef:ghostty
-      packages:
-         - ghostty
+        - ghostty
 
-    - zathura
-    - zathura-fish-completion
-    - zathura-plugins-all
-    - gtk4-layer-shell
-    - uupd
-    - trayscale
-    # for brew
-    - adw-gtk3-theme
-    - gcc-c++
-    - gcc
-    - make
-    - mesa-libGLU
-    - podman-compose
-    - code # need this on the host :(
-    - distrobox
-    # - podman-plugins
-    - podman-tui
-    - podmansh
-    - podman-machine
-    - NetworkManager-tui
-    - rofi-wayland
-    # hyprland packages
-    - gvfs-fuse
-    - waybar
-    - xorg-x11-server-Xwayland
-    - xdg-user-dirs
-    # - wezterm
-    # sway pkg
-    - tailscale
-    - sway
-    - android-tools
-    - android-file-transfer
-    # common utils
-    - swaybg
-    - swayidle
-    - swaylock
-    - lxqt-policykit
-    - libseat
-    - network-manager-applet
-    - system-config-printer
-    - firewall-config
-    - blueman
-    - thunar
-    - thunar-archive-plugin
-    - imv
-    - kvantum
-    # - eza
-    - gnome-disk-utility
-    - mako
-    - xarchiver
-    - swappy
-    - docker-compose
-    # qt shiz
-    - sddm
-    - qt5ct
-    - qt6ct
-    - qt6-qtwayland
-    - qt5-qtwayland
-    - qt5-qtgraphicaleffects
-    - qt5-qtquickcontrols2
-    - qt5-qtsvg
-    # launchers
-    - fuzzel
-    # terminals
-    - foot
-    # screenshotting
-    - grimshot
-    - gnome-keyring
-    # fonts
-    - overpass-fonts
-    - overpass-mono-fonts
-    - google-noto-emoji-fonts
-    - google-noto-fonts-common
-    - google-roboto-fonts
-    - google-noto-sans-fonts
-    # config deps
-    - light
-    - fish
-    - wtype
-    # audio
-    - pipewire
-    - wireplumber
-    - pipewire-alsa
-    - pipewire-jack-audio-connection-kit
-    - pipewire-pulseaudio
-    # git askpass
-    - ksshaskpass
-    # Mullvad
-    - mullvad-vpn
-    - steam
-    - openssl-devel
-remove:
-  packages:
-  # - jack-audio-connection-kit
-    - firefox # default firefox removed in favor of flatpak
-    - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-    - toolbox
+  - type: dnf
+    repos:
+      nonfree: rpmfusion
+      files:
+        - https://repository.mullvad.net/rpm/stable/mullvad.repo
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+      copr:
+        - ublue-os/packages
+        - ublue-os/staging
+        - wezfurlong/wezterm-nightly
+    optfix:
+      - Mullvad VPN
+    install:
+      skip-unavailable: true # skip unavailable packages
+      packages:
+        - podman-docker
+        - bazaar
+        - wezterm
+
+        - repo: terra
+          packages:
+             - android-udev-rules
+        - zathura
+        - zathura-fish-completion
+        - zathura-plugins-all
+        - gtk4-layer-shell
+        - uupd
+        - trayscale
+        # for brew
+        - adw-gtk3-theme
+        - gcc-c++
+        - gcc
+        - make
+        - mesa-libGLU
+        - podman-compose
+        - code # need this on the host :(
+        - distrobox
+        # - podman-plugins
+        - podman-tui
+        - podmansh
+        - podman-machine
+        - NetworkManager-tui
+        - rofi-wayland
+        # hyprland packages
+        - gvfs-fuse
+        - waybar
+        - xorg-x11-server-Xwayland
+        - xdg-user-dirs
+        # - wezterm
+        # sway pkg
+        - tailscale
+        - sway
+        - android-tools
+        - android-file-transfer
+        # common utils
+        - swaybg
+        - swayidle
+        - swaylock
+        - lxqt-policykit
+        - libseat
+        - network-manager-applet
+        - system-config-printer
+        - firewall-config
+        - blueman
+        - thunar
+        - thunar-archive-plugin
+        - imv
+        - kvantum
+        # - eza
+        - gnome-disk-utility
+        - mako
+        - xarchiver
+        - swappy
+        - docker-compose
+        # qt shiz
+        - sddm
+        - qt5ct
+        - qt6ct
+        - qt6-qtwayland
+        - qt5-qtwayland
+        - qt5-qtgraphicaleffects
+        - qt5-qtquickcontrols2
+        - qt5-qtsvg
+        # launchers
+        - fuzzel
+        # terminals
+        - foot
+        # screenshotting
+        - grimshot
+        - gnome-keyring
+        # fonts
+        - overpass-fonts
+        - overpass-mono-fonts
+        - google-noto-emoji-fonts
+        - google-noto-fonts-common
+        - google-roboto-fonts
+        - google-noto-sans-fonts
+        # config deps
+        - light
+        - fish
+        - wtype
+        # audio
+        - pipewire
+        - wireplumber
+        - pipewire-alsa
+        - pipewire-jack-audio-connection-kit
+        - pipewire-pulseaudio
+        # git askpass
+        - ksshaskpass
+        # Mullvad
+        - mullvad-vpn
+        - steam
+        - openssl-devel
+    remove:
+      packages:
+        - firefox # default firefox removed in favor of flatpak
+        - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+        - toolbox
+
