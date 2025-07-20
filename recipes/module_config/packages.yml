@@ -3,23 +3,26 @@ repos:
   nonfree: rpmfusion
   files:
     - https://repository.mullvad.net/rpm/stable/mullvad.repo
-    - https://repos.fyralabs.com/terra%OS_VERSION%
+    - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
   copr:
     - ublue-os/packages
     - ublue-os/staging
     - gerelef/ghostty
     - wezfurlong/wezterm-nightly
-    # - pgdev/ghostty
 optfix:
   - Mullvad VPN
 install:
-  skip-unavailable: true # skip unavailable packages
+  # skip-unavailable: true # skip unavailable packages
   packages:
-    - android-udev-rules
     - podman-docker
     - bazaar
     - wezterm
-    - ghostty
+    - repo: terra
+      packages:
+         - android-udev-rules
+    - repo: copr:copr.fedorainfracloud.org:gerelef:ghostty
+      packages:
+         - ghostty
     - zathura
     - zathura-fish-completion
     - zathura-plugins-all
