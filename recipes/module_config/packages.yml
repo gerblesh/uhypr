@@ -53,6 +53,7 @@ modules:
         - rofi-wayland
         # hyprland packages
         - gvfs-fuse
+        - gvfs-mtp
         - waybar
         - xorg-x11-server-Xwayland
         - xdg-user-dirs
