@@ -31,6 +31,10 @@ modules:
           packages:
              - android-udev-rules
         - zathura
+        - niri
+        - xwayland-satellite
+        # For niri:
+        - xdg-desktop-portal-gnome
         - zathura-fish-completion
         - zathura-plugins-all
         - gtk4-layer-shell
