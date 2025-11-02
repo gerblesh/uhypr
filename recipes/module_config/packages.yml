@@ -24,7 +24,6 @@ modules:
       skip-unavailable: true # skip unavailable packages
       packages:
         - podman-docker
-        - bazaar
         - wezterm
 
         - repo: terra
