@@ -2,7 +2,7 @@ modules:
   - type: dnf # Install seperately
     repos:
       copr:
-      - gerelef/ghostty
+      - scottames/ghostty
     install:
       skip-unavailable: true # skip unavailable packages
       packages:
