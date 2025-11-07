@@ -2,7 +2,7 @@ name: uhypr
 description: custom sway image for framework laptop.
 
 base-image: quay.io/fedora-ostree-desktops/sway-atomic
-image-version: 42
+image-version: 43
 
 modules:
   - type: files
