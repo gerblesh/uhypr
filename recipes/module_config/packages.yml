@@ -116,6 +116,7 @@ modules:
         # audio
         - pipewire
         - wivrn
+        - mesa-va-drivers-freeworld
         - wireplumber
         - pipewire-alsa
         - pipewire-jack-audio-connection-kit
