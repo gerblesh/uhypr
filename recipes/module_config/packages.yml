@@ -115,6 +115,7 @@ modules:
         - wtype
         # audio
         - pipewire
+        - wivrn
         - wireplumber
         - pipewire-alsa
         - pipewire-jack-audio-connection-kit
